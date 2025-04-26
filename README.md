@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Socket.io Chat Application
+
+A real-time chat application built with Next.js and Socket.io that features chat rooms and direct messaging capabilities.
+
+## Features
+- Real-time messaging with Socket.io
+- Chat rooms and direct messaging
+- TypeScript for type safety
+- Custom server integration
+- Responsive UI
+
+## Architecture
+The application uses a custom server setup with Next.js and Socket.io to handle real-time communication. The server is written in TypeScript and serves both the Next.js application and the Socket.io server on the same port.
 
 ## Getting Started
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/G1anpierre/nextjs-socket-chat.git
+   cd nextjs-socket-chat
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-First, run the development server:
+## How It Works
+- Users can join chat rooms and send messages in real-time.
+- Direct messaging allows users to send private messages to each other.
+- The server broadcasts messages to all clients in a room or directly to a specific user.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Socket Events
+- `join_room`: Join a specific chat room.
+- `leave_room`: Leave a chat room.
+- `message_room`: Send a message to a chat room.
+- `direct_message`: Send a direct message to a specific user.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
+- `src/app/`: Contains the main application components.
+- `src/components/`: Contains reusable UI components.
+- `server.ts`: The custom server file handling both Next.js and Socket.io.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+This project is licensed under the MIT License. 
